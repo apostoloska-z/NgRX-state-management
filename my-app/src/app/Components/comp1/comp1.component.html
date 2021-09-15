@@ -1,0 +1,32 @@
+<div class="comp1">
+    <div class="block__wrapper">
+        <p>
+            Button for increasing count by one
+        </p>
+        <button type="button" (click)='increaseCount()'>
+            Increase count
+        </button>
+    </div>
+
+    
+    <div class="block__wrapper">
+        <p>Message:</p>
+        <input type="text" [(ngModel)]='message'/>
+        <br>
+        <br>
+        <button (click)='sendMessage()'>Send message</button>
+    </div>
+
+    <div class="block__wrapper">
+        <button type="button" (click)='getData()'>
+            GET WEATHER API DATA
+        </button>
+    </div>
+
+    <div class="block__wrapper">
+        <button type="button" (click)='getPrData()'>
+            GET PROMISE DATA
+        </button>
+    </div>
+
+</div>

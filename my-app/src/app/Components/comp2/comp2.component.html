@@ -1,0 +1,15 @@
+<div class="comp2">
+    <div class="block__wrapper">
+        <p>Count: {{ count$ | async }}</p>
+    </div>
+    <div class="block__wrapper">
+        <p>Message: {{ message$ | async}}</p>
+    </div>
+    <div class="block__wrapper">
+        <p> Humidity in Kyiv: {{ data$ | async}} %</p>
+    </div>
+    <div class="block__wrapper">
+        <p>Message from promise: {{ prdata$ | async}}</p>
+    </div>    
+</div>
+

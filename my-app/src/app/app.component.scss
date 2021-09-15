@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+}
+
+app-comp1 {
+    flex-basis: 50%;
+    margin-right: 25px;
+}
+
+app-comp2 {
+    flex-basis: 50%;
+}

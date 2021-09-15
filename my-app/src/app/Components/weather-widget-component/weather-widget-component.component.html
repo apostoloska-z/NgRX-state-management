@@ -1,0 +1,42 @@
+<div>
+    <input
+        type="text"
+        ngModel
+        [(ngModel)]="query"
+    />
+    <button
+        type="button"
+        (click)="searchQuery()"
+    >Search the city</button>
+</div>
+
+
+<div>
+    <div>
+        <span *ngIf="WeatherData.isDay" class="material-icons-outlined">
+            wb_sunny
+        </span>
+        <span *ngIf="!WeatherData.isDay" class="material-icons-outlined">
+            nightlight
+        </span>
+    </div>
+    <div>
+        {{WeatherData.temp_celcius}} degrees
+    </div>
+    <div>
+        min: {{WeatherData.temp_min}}, max: {{WeatherData.temp_max}}
+    </div>
+    <div>
+        Feels like: {{WeatherData.temp_feels_like}}
+    </div>
+    <div>
+        {{WeatherData.name}}
+    </div>
+    <div>
+        Humidity: {{WeatherData.main.humidity}}%
+    </div>
+</div>
+
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QBK6xymmKHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

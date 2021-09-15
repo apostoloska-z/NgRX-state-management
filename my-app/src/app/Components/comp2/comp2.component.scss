@@ -1,0 +1,14 @@
+.comp2 {
+    border: 2px solid green;
+    padding: 30px;
+    text-align: center;
+}
+
+.block_wrapper {
+    padding: 15px;
+    border: 2px solid greenyellow;
+}
+
+.block_wrapper:not(:last-child) {
+    margin-bottom: 30px;
+}

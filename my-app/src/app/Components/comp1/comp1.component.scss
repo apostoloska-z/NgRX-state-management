@@ -1,0 +1,14 @@
+.comp1 {
+    border: 2px solid black;
+    padding: 30px;
+    text-align: center;
+}
+
+.block__wrapper {
+    padding: 15px;
+    border: 2px solid burlywood;
+}
+
+.block__wrapper:not(:last-child) {
+    margin-bottom: 30px;
+}
