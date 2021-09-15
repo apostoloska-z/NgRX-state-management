@@ -12,8 +12,7 @@ export class ExampleEffects {
             ofType(ExampleActions.getWeather),
             mergeMap(() => this.getWeatherService.getWeather('Kyiv').pipe(
                 map(data => {
-                    console.log('hello')
-                    return ExampleActions.getWeatherSuccess({ data: data.main.humidity});
+                    return ExampleActions.getWeatherSuccess({ data: data.main});
                 })
             )
             )

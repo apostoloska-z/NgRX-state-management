@@ -6,7 +6,8 @@
         <p>Message: {{ message$ | async}}</p>
     </div>
     <div class="block__wrapper">
-        <p> Humidity in Kyiv: {{ data$ | async}} %</p>
+        <!-- <p> Humidity in Kyiv: {{ (data$ | async)?.humidity }}%</p> -->
+        <p> Humidity in Kyiv: {{ weatherData?.humidity }}%</p>
     </div>
     <div class="block__wrapper">
         <p>Message from promise: {{ prdata$ | async}}</p>

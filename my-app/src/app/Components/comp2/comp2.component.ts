@@ -9,7 +9,7 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./comp2.component.scss']
 })
 
-export class Comp2Component implements OnInit{
+export class Comp2Component {
   count$: Observable<number>;
   message$: Observable<any>;
   data$: Observable<any>;
@@ -23,18 +23,13 @@ export class Comp2Component implements OnInit{
     this.prdata$ = this.store$.select(ExampleSelectors.prdata);
   }
 
-  ngOnInit() {
-    this.weatherData=this.data$;
-    console.log(this.data$);
+
+  ngOnInit():void {
+    this.store$.select(ExampleSelectors.data).subscribe(data => {
+      this.data$=data;
+      this.weatherData = this.data$;
+      console.log(this.weatherData);
+    })
   }
-
-
-  // ngOnInit():void {
-  //   this.store$.select(ExampleSelectors.data).subscribe(data => {
-  //     this.data$=data;
-  //     this.weatherData = this.data$;
-  //     console.log(this.weatherData);
-  //   })
-  // }
 
 }

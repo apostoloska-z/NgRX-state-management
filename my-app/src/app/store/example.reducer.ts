@@ -5,7 +5,7 @@ import {ExampleActions} from './example.actions';
 export interface State {
     count: number;
     message?: string;
-    data?: number;
+    data?: any;
     prdata?: string;
 }
 
