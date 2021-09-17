@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { reducer } from './store/example.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { ExampleEffects, ExampleEffects2 } from './store/example.effects';
+import {FormatPipe} from './format.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ExampleEffects, ExampleEffects2 } from './store/example.effects';
     AppComponent,
     WeatherWidgetComponentComponent,
     Comp1Component,
-    Comp2Component
+    Comp2Component,
+    FormatPipe,
   ],
   imports: [
     BrowserModule,

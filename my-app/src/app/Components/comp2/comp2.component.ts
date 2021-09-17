@@ -23,13 +23,21 @@ export class Comp2Component {
     this.prdata$ = this.store$.select(ExampleSelectors.prdata);
   }
 
-
-  ngOnInit():void {
-    this.store$.select(ExampleSelectors.data).subscribe(data => {
-      this.data$=data;
-      this.weatherData = this.data$;
-      console.log(this.weatherData);
-    })
+  setTemperature(value: number) {
+    let celcius;
+    if(value) {
+      celcius = (value - 273.15).toFixed(0)
+    }
+        return celcius;
   }
+
+
+  // ngOnInit():void {
+  //   this.store$.select(ExampleSelectors.data).subscribe(data => {
+  //     this.data$=data;
+  //     this.weatherData = this.data$;
+  //     console.log(this.weatherData);
+  //   })
+  // }
 
 }
